@@ -15,8 +15,8 @@
 \usepackage{natbib}
 \bibliographystyle{agsm}
 \setcitestyle{yysep={,}}
-\setmainfont{Arial}
-% \setmainfont{Liberation Sans}
+% \setmainfont{Arial}
+\setmainfont{Liberation Sans}
 \spacing{1.5}
 \usetikzlibrary{mindmap}
 
@@ -34,10 +34,20 @@
 {0.5em}
 {}
 
+\titleformat{\subsubsection}
+{\normalsize\bfseries}
+{\thesubsubsection}
+{0.5em}
+{}
+
+
 \titlespacing*{\section}
 {0pt}{0.5em}{0.5em}
 
 \titlespacing*{\subsection}
+{0pt}{0.5em}{0.5em}
+
+\titlespacing*{\subsubsection}
 {0pt}{0.5em}{0.5em}
 
 \setlength{\headheight}{20.6pt}
