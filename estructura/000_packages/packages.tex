@@ -4,6 +4,7 @@
 % ==== Tipografía e idioma (XeLaTeX) ====
 \usepackage{booktabs}
 \usepackage{fontspec}
+% \setmainfont{Arial}
 \setmainfont{Liberation Sans}
 
 \usepackage[spanish]{babel}
@@ -26,6 +27,8 @@
 \usepackage{fancyhdr}
 \usepackage{pgfgantt}
 \usepackage{setspace}
+\setlength{\skip\footins}{1.5em}      % Más espacio antes de las notas
+\renewcommand{\footnoterule}{\vspace*{-0.5em}\hrule width 0.4\textwidth\vspace*{0.8em}}
 \setstretch{1.5}
 
 % TikZ (necesario para \usetikzlibrary)
