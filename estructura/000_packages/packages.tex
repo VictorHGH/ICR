@@ -1,30 +1,59 @@
 \author{González Hernández Victor Hugo}
 \title{Idonea comunicación de resultados}
 
+% ==== Tipografía e idioma (XeLaTeX) ====
 \usepackage{booktabs}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+
 \usepackage[spanish]{babel}
+\usepackage[style=english,autostyle=false]{csquotes} % “comillas inglesas” con \enquote
+
+% ==== Microtipografía y ajustes anti-overfull ====
+\usepackage{microtype}
+\tolerance=3000
+\emergencystretch=3em
+\hfuzz=0.5pt
+\microtypesetup{protrusion=true}
+
+% ==== Maquetación y utilidades ====
 \usepackage[left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{xcolor}
-% \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{pgfgantt}
 \usepackage{setspace}
-\usepackage{fontspec}
-\usepackage{natbib}
-\bibliographystyle{agsm}
-\usepackage[hidelinks]{hyperref}
-\setcitestyle{yysep={,}}
-\setmainfont{Arial}
-% \setmainfont{Liberation Sans}
-\spacing{1.5}
+\setstretch{1.5}
+
+% TikZ (necesario para \usetikzlibrary)
+\usepackage{tikz}
 \usetikzlibrary{mindmap}
 
-\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+% ==== Bibliografía y enlaces ====
+\usepackage{natbib}
+\bibliographystyle{agsm}
+\setcitestyle{yysep={,}}
+\usepackage[hidelinks]{hyperref}
 
+% ==== Guionado manual de palabras difíciles ====
+\hyphenation{
+  Mez-qui-tal
+  bio-cul-tu-ral
+  ver-ná-cu-la
+  ver-ná-cu-las
+  au-to-cons-cien-te
+  le-chu-gui-lla
+  qui-o-tes
+  hñähñu
+  Wä-da
+  sem-i-de-sér-ti-co
+  pa-tri-mo-nio
+}
+
+% ==== Títulos ====
 \titleformat{\section}
 {\large\bfseries}
 {\thesection}
@@ -43,26 +72,24 @@
 {0.5em}
 {}
 
+\titlespacing*{\section}{0pt}{0.5em}{0.5em}
+\titlespacing*{\subsection}{0pt}{0.5em}{0.5em}
+\titlespacing*{\subsubsection}{0pt}{0.5em}{0.5em}
 
-\titlespacing*{\section}
-{0pt}{0.5em}{0.5em}
-
-\titlespacing*{\subsection}
-{0pt}{0.5em}{0.5em}
-
-\titlespacing*{\subsubsection}
-{0pt}{0.5em}{0.5em}
-
+% ==== Listas ====
 \setlist{itemsep=1.5pt, parsep=0pt, topsep=0pt, partopsep=0pt}
 
+% ==== Encabezados y pies ====
 \setlength{\headheight}{20.6pt}
 \fancyhf{}
 \lhead[\leftmark]{\textcolor{gray}{UAM-Xochimilco}}
-\rhead[\textcolor{gray}{UAM-Xochimilco}]{}%\leftmark
+\rhead[\textcolor{gray}{UAM-Xochimilco}]{}
 \lfoot[\thepage]{\textcolor{gray}{González H. Victor H.}}
 \rfoot[\textcolor{gray}{González H. Victor H.}]{\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
-
-
 \pagestyle{fancy}
+
+% ==== Traducciones ====
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+
