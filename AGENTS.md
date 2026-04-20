@@ -33,3 +33,32 @@
 - For normal content updates, edit only `.tex` files and `estructura/bibliografia/referencias.bib`.
 - After content/citation changes, run `latexmk -xelatex -pdf icr.tex` from `estructura/` and check for unresolved citations/references.
 - Avoid renaming files/folders with accented names unless all related import paths are updated.
+
+## Current Direction (2026-04-20)
+- Time constraint: next major deliverable in ~15 days.
+- Research focus shift: move from index-heavy evaluation (e.g. IVT, socio-economic surveys) to a practical, descriptive output.
+- Target output: descriptive + cartographic diagnostic of traditional housing in two communities.
+- Available empirical material:
+  - Photographs of traditional dwellings (current and/or historical).
+  - Geolocations per dwelling; QGIS-ready shapefiles for points and routes; layers for multi-scale context maps (Mexico -> region -> communities -> dwellings).
+  - Audio/spoken accounts from inhabitants about lived experience and changes.
+  - Literature summaries: `bibliografia_pdf/` contains PDFs and per-PDF `.md` summaries (folder is git-ignored).
+- Current constraints:
+  - No architectural measured drawings/levantamientos.
+  - No socio-economic surveys.
+  - Prefer to avoid constructing synthetic indices (e.g. IVT) in results.
+- Near-term storyline:
+  - Demonstrate richness of local knowledge by identifying multiple construction systems (goal: 4 systems across 2 communities).
+  - Argue that each system responds to material availability/proximity.
+  - If safe/feasible: one final field revisit to capture changes since ~3 years and enable before/after comparison.
+
+## Recent Repo Changes (session notes)
+- Moved/placed the "zombi de la modernidad" concept into the theoretical chapter (tipologías de valor) and removed it from the introductory context.
+- Improved table typography to reduce Overfull/Underfull hbox warnings by introducing ragged-right `L{}` columns (`array` + `\newcolumntype`).
+- Updated research questions, objectives, methodology, and operational tables to align with a descriptive + cartographic diagnostic (removed IVT and socio-economic survey dependencies).
+- Note: `.gitignore` now includes `*.xdv` (XeLaTeX intermediate) to avoid untracked build artifacts.
+
+## Next Steps
+- Confirm real case count: how many dwellings/houses are fully documented (photos + location + at least one spoken account).
+- Confirm the 4 construction systems: names you will use and the minimal observable criteria for classification.
+- Confirm privacy/publication constraints: can you publish exact locations and identifiable photos, or should the thesis anonymize (codes per dwelling and generalized location).
