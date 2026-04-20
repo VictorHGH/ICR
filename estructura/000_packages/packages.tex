@@ -22,6 +22,7 @@
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{enumitem}
+\usepackage{array}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
@@ -81,6 +82,7 @@
 
 % ==== Listas ====
 \setlist{itemsep=1.5pt, parsep=0pt, topsep=0pt, partopsep=0pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 % ==== Encabezados y pies ====
 \setlength{\headheight}{20.6pt}
@@ -95,4 +97,3 @@
 
 % ==== Traducciones ====
 \addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
-
