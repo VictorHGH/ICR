@@ -59,6 +59,15 @@
 - Note: `.gitignore` now includes `*.xdv` (XeLaTeX intermediate) to avoid untracked build artifacts.
 
 ## Next Steps
-- Confirm real case count: how many dwellings/houses are fully documented (photos + location + at least one spoken account).
-- Confirm the 4 construction systems: names you will use and the minimal observable criteria for classification.
-- Confirm privacy/publication constraints: can you publish exact locations and identifiable photos, or should the thesis anonymize (codes per dwelling and generalized location).
+- Confirm privacy/publication constraints: can you publish exact locations and identifiable photos, or should the thesis anonymize (codes per construction and generalized location).
+
+## Confirmed Inputs (2026-04-21)
+- Case count: 4 traditional constructions documented (photos + location + at least one spoken account).
+- Unit of analysis wording: prefer \emph{construcciones} (not \emph{viviendas}), since what remains standing are mainly kitchens or storage buildings.
+- Provisional construction systems to classify (goal: 4 systems across 2 communities):
+  - Penca de maguey: muros con entramado de quiote de lechuguilla y recubrimiento de pencas de maguey.
+  - Piedra "tepetate" (nombre local): muros a hueso con ese tipo de piedra (pendiente confirmar material exacto).
+  - Bajareque (tipo "pajareque"): entramado de lechuguilla, relleno con "castillo" y recubrimiento con tierra.
+  - Órganos: cerramientos/muros con cactus "órgano" formando un entorno cerrado pero vivo.
+- Common observed condition: floors are usually compacted earth; roofs are often replaced with corrugated sheets (various materials).
+- Privacy/publication: for internal presentations you will use exact locations; for the published thesis/output you will generalize locations and anonymize constructions as needed.
