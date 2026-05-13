@@ -48,7 +48,7 @@
 ## Current Direction (updated 2026-05-08)
 - Research focus is now an ICR-style, practical, descriptive output aligned with Guerrero Baca-oriented theses/ICR patterns: concrete case, diagnostic core, fichas, cartography, criteria, and an operational product.
 - Research focus shift: move from index-heavy evaluation (e.g. IVT, socio-economic surveys) to a practical, descriptive output.
-- Target output: descriptive + cartographic diagnostic of four traditional constructions in two communities, plus an expandable web catalog.
+- Target output: descriptive + cartographic diagnostic of four traditional constructions in two communities, plus fichas, maps, comparative synthesis, and basic documentation/conservation criteria.
 - Available empirical material:
   - Photographs of four traditional constructions (current and/or historical).
   - Geolocations per construction; QGIS-ready shapefiles for points and routes; layers for multi-scale context maps (Mexico -> region -> communities -> constructions).
@@ -62,7 +62,7 @@
   - Demonstrate richness of local knowledge by identifying multiple construction systems (goal: 4 systems across 2 communities).
   - Argue that each system responds to material availability/proximity.
   - If safe/feasible: one final field revisit to capture changes since ~3 years and enable before/after comparison.
-  - Treat the website/catalog as the operational product, not as a secondary appendix.
+  - Do not present a website as the operational product for now; it was previously considered but needs a better plan and approval before reintroducing it.
 
 ## Recent Repo Changes (session notes)
 - Moved/placed the "zombi de la modernidad" concept into the theoretical chapter (tipologías de valor) and removed it from the introductory context.
@@ -77,20 +77,23 @@
   - `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex`
   - `estructura/008_producto_operativo/producto_operativo.tex`
   - `estructura/009_conclusiones/conclusiones.tex`
-- Reoriented the objective, questions, methodology, and conclusions toward four documented constructions, fichas, cartography, spoken accounts, and an expandable web catalog.
+- Reoriented the objective, questions, methodology, and conclusions toward four documented constructions, fichas, cartography, spoken accounts, and operational documentation criteria.
 - Updated `estructura/000_packages/packages.tex` with `\setlength{\headheight}{30pt}` to remove the `fancyhdr` headheight warning.
 - Last successful build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 42 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull` typography messages and two BibTeX `empty publisher` warnings for older entries.
 - Latest pushed commits on `main`:
   - `d962daf` `[Updated] streamline marco teorico closures`
   - `2c9e2ee` `[Updated] restructure manuscript for web catalog`
   - `385bc6b` `[Updated] fix fancyhdr headheight warning`
+  - `592e373` `[Updated] persist session guidance notes`
+- Current correction after those commits: remove the website/catalog-web framing from the manuscript. Keep the product as fichas, maps, comparative synthesis, and criteria until the website plan is better developed and approved.
 
 ## Next Steps
+- First action in the next session: ask the user for the missing field data before expanding the diagnosis. Do not invent or fill empirical ficha content without user-provided data.
 - Fill the empirical diagnosis for `C-01` to `C-04` with real field data: community, use, materials, state, observed changes, associated spoken account, photographs, and generalized location.
 - Select which photographs can be published and which must remain internal.
 - Prepare maps for the diagnostic chapter: regional context, communities, generalized construction locations, routes, and relation to local materials.
 - Expand `007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` from placeholders into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
-- Develop the web catalog logic in `008_producto_operativo/producto_operativo.tex`: fields, filters, map behavior, privacy levels, and growth rules.
+- Refine `008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
 - Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
 
 ## Confirmed Inputs (2026-04-21)
@@ -110,10 +113,17 @@
 - `C-03`: bajareque or "pajareque"; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
 - `C-04`: órganos; treat as living or semi-living enclosure/cerramiento, not necessarily a conventional building.
 
+## Data To Request First
+- For each construction `C-01` to `C-04`, ask for: community, current or remembered use, observed materials, physical state, visible changes, associated spoken account summary, photograph selection/publication permission, and location handling (exact internal vs generalized public).
+- Ask whether there are before/after photographs for any case, especially if a final field revisit is possible.
+- Ask which maps already exist as QGIS outputs and which still need to be exported for the thesis.
+- Confirm cautious naming for `tepetate` and `pajareque/bajareque` before writing final diagnostic language.
+
 ## Writing Guidance For Next Sessions
 - Use `construcciones tradicionales` as the default unit; avoid reverting to `viviendas` unless discussing prior literature.
 - Keep the tone human and direct, not like a generic methods manual.
 - Avoid adding mini-summaries called `Conclusión de la sección` inside every subsection.
 - Do not reintroduce IVT, socioeconomic surveys, measured architectural drawings, or synthetic indices unless the user explicitly changes the scope.
-- The practical contribution is documentation plus public-facing organization: fichas, maps, typology, basic preventive criteria, and an expandable web catalog.
+- The practical contribution is documentation and organization: fichas, maps, typology, basic preventive criteria, and a clear structure for continuing the record later.
+- Do not reintroduce a website/catalog-web product unless the user explicitly asks for it after developing a stronger plan.
 - Protect privacy in public outputs: no exact coordinates, no identifiable owners, and no sensitive photographs without explicit authorization.
