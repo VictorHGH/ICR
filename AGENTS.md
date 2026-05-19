@@ -61,7 +61,7 @@
 - Near-term storyline:
   - Demonstrate richness of local knowledge by identifying multiple construction systems (goal: 4 systems across 2 communities).
   - Argue that each system responds to material availability/proximity.
-  - If safe/feasible: one final field revisit to capture changes since ~3 years and enable before/after comparison.
+  - No final field revisit is planned; work only with the existing photographs, geolocations, maps, and spoken accounts.
   - Do not present a website as the operational product for now; it was previously considered but needs a better plan and approval before reintroducing it.
 
 ## Recent Repo Changes (session notes)
@@ -102,7 +102,7 @@
 - Provisional construction systems to classify (goal: 4 systems across 2 communities):
   - Penca de maguey: muros con entramado de quiote de lechuguilla y recubrimiento de pencas de maguey.
   - Piedra "tepetate" (nombre local): muros a hueso con ese tipo de piedra (pendiente confirmar material exacto).
-  - Bajareque (tipo "pajareque"): entramado de lechuguilla, relleno con "castillo" y recubrimiento con tierra.
+  - Bajareque: entramado de lechuguilla, relleno con "castillo" y recubrimiento con tierra.
   - Órganos: cerramientos/muros con cactus "órgano" formando un entorno cerrado pero vivo.
 - Common observed condition: floors are usually compacted earth; roofs are often replaced with corrugated sheets (various materials).
 - Privacy/publication: for internal presentations you will use exact locations; for the published thesis/output you will generalize locations and anonymize constructions as needed.
@@ -110,14 +110,14 @@
 ## Current Corpus Placeholders
 - `C-01`: penca de maguey; needs final community, photos, location handling, state, use, and spoken account summary.
 - `C-02`: piedra local or "tepetate"; keep the wording cautious because material characterization is pending.
-- `C-03`: bajareque or "pajareque"; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
+- `C-03`: bajareque; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
 - `C-04`: órganos; treat as living or semi-living enclosure/cerramiento, not necessarily a conventional building.
 
 ## Data To Request First
 - For each construction `C-01` to `C-04`, ask for: community, current or remembered use, observed materials, physical state, visible changes, associated spoken account summary, photograph selection/publication permission, and location handling (exact internal vs generalized public).
-- Ask whether there are before/after photographs for any case, especially if a final field revisit is possible.
+- Ask whether there are existing before/after photographs for any case; do not assume a new field visit will happen.
 - Ask which maps already exist as QGIS outputs and which still need to be exported for the thesis.
-- Confirm cautious naming for `tepetate` and `pajareque/bajareque` before writing final diagnostic language.
+- Confirm cautious naming for `tepetate`; use `bajareque` consistently for `C-03`.
 
 ## Writing Guidance For Next Sessions
 - Use `construcciones tradicionales` as the default unit; avoid reverting to `viviendas` unless discussing prior literature.
