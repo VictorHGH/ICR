@@ -1,0 +1,55 @@
+%! TeX program = xelatex
+\documentclass[10pt]{article}
+
+\usepackage[letterpaper,landscape,margin=1.2cm]{geometry}
+\usepackage{fontspec}
+\usepackage[spanish]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\setmainfont{Liberation Sans}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\arrayrulewidth}{0.4pt}
+\arrayrulecolor{gray!65}
+\renewcommand{\arraystretch}{1.28}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+
+{\Large\bfseries Programa de 10 semanas para cierre del proyecto}\par
+\vspace{0.3cm}
+{\small Se trabaja con fotografías, geolocalizaciones, mapas y relatos existentes.}\par
+\vspace{0.5cm}
+
+\begin{tabularx}{\linewidth}{|L{0.08\linewidth}|Y|Y|Y|}
+\hline
+\textbf{Semana} & \textbf{Objetivo} & \textbf{Actividades principales} & \textbf{Entregable} \\
+\hline
+1 & Ordenar información y datos faltantes & Definir C-01 a C-04; reunir fotos, relatos, ubicación, uso, materiales, estado y permisos de publicación. & Tabla completa de la información y carpeta organizada de evidencias. \\
+\hline
+2 & Cerrar evidencia existente & Revisar fotografías actuales e históricas ya disponibles; confirmar nombres locales como tepetate; definir qué se puede publicar. & Archivo de evidencias cerrado y criterios de privacidad definidos. \\
+\hline
+3 & Preparar cartografía & Exportar mapas desde QGIS: contexto regional, comunidades, puntos generalizados, recorridos y relación con materiales. & Paquete cartográfico preliminar para insertar en ICR. \\
+\hline
+4 & Redactar diagnóstico C-01 y C-02 & Llenar fichas narrativas y descriptivas; integrar fotos, materiales, estado, cambios y relato asociado. & Fichas completas C-01 y C-02. \\
+\hline
+5 & Redactar diagnóstico C-03 y C-04 & Completar fichas; tratar órganos como cerramiento vivo o semivivo; documentar bajareque con entramado, relleno y recubrimiento. & Fichas completas C-03 y C-04. \\
+\hline
+6 & Comparación, fichas, mapas y criterios. & Elaborar cuadro comparativo; sintetizar materiales, usos, estados y cambios; afinar fichas, mapas y criterios. & Revision final de cápitulos correspondientes. \\
+\hline
+7 & Ajustar introducción, objetivos y metodología & Revisar coherencia entre preguntas, objetivos, metodología, diagnóstico y producto operativo. & Introducción y metodología alineadas con resultados reales. \\
+\hline
+8 & Redactar conclusiones y revisar marco & Redactar conclusiones por pregunta de investigación; revisar que el marco teórico no prometa más de lo que el diagnóstico entrega. & Conclusiones completas y marco ajustado. \\
+\hline
+9 & Edición integral & Revisar estilo, repeticiones, citas, tablas, pies de figura, numeración, referencias, anexos y privacidad. & Borrador final completo. \\
+\hline
+10 & Cierre técnico y entrega & Compilar, corregir warnings relevantes, revisar PDF, generar versión final y respaldos. & PDF final listo para entrega. \\
+\hline
+\end{tabularx}
+
+\end{document}
