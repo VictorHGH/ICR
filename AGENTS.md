@@ -46,8 +46,9 @@
 - After content/citation changes, run `latexmk -pdfxe icr.tex` from `estructura/` and check for unresolved citations/references.
 - Avoid renaming files/folders with accented names unless all related import paths are updated.
 
-## Current Direction (updated 2026-05-08)
-- Research focus is now an ICR-style, practical, descriptive output aligned with Guerrero Baca-oriented theses/ICR patterns: concrete case, diagnostic core, fichas, cartography, criteria, and an operational product.
+## Current Direction (updated 2026-05-19)
+- Research focus is now an ICR-style, practical, descriptive output aligned with Guerrero Baca 2025 research-structure guidance and Guerrero Baca-oriented ICR patterns: concrete case, diagnostic core, fichas, cartography, criteria, and an operational product.
+- The manuscript now makes the structure explicit: problemática, objeto de estudio, unidad de análisis, categorías, evidencia, procedimiento, producto and alcance.
 - Research focus shift: move from index-heavy evaluation (e.g. IVT, socio-economic surveys) to a practical, descriptive output.
 - Target output: descriptive + cartographic diagnostic of four traditional constructions in two communities, plus fichas, maps, comparative synthesis, and basic documentation/conservation criteria.
 - Available empirical material:
@@ -65,6 +66,17 @@
   - No final field revisit is planned; work only with the existing photographs, geolocations, maps, and spoken accounts.
   - Do not present a website as the operational product for now; it was previously considered but needs a better plan and approval before reintroducing it.
 
+## Current Structural Alignment
+- Active alignment source from advisor: `bibliografia_pdf/(2025)_(Propuesta_de_estructura_de_investigacion)_(Guerrero_Baca).pdf`, cited in the manuscript as `guerrerobaca2025propuesta`.
+- New introduction subsection: `estructura/003_introduccion/008_estructura_de_investigacion/estructura_de_investigacion.tex`.
+- Active introduction aggregator: `estructura/003_introduccion/introduccion.tex`.
+- Active objectives file imported by the manuscript: `estructura/003_introduccion/006_objetivos/objetivos.tex`.
+- Note: `estructura/003_introduccion/006_objetivos/008.1_objetivo_general/` and `008.2_objetivos_especificos/` exist, but they are not imported by the current aggregator unless `objetivos.tex` is changed to subimport them. Keep `objetivos.tex` coherent first.
+- Methodology now includes:
+  - categorical, qualitative analysis fields instead of indices.
+  - a step-by-step procedure from corpus matrix to fichas, cartography, comparative synthesis, and documentation criteria.
+  - a matriz de congruencia linking questions, objectives, techniques, and products.
+
 ## Recent Repo Changes (session notes)
 - Moved/placed the "zombi de la modernidad" concept into the theoretical chapter (tipologías de valor) and removed it from the introductory context.
 - Improved table typography to reduce Overfull/Underfull hbox warnings by introducing ragged-right `L{}` columns (`array` + `\newcolumntype`).
@@ -79,9 +91,15 @@
   - `estructura/008_producto_operativo/producto_operativo.tex`
   - `estructura/009_conclusiones/conclusiones.tex`
 - Reoriented the objective, questions, methodology, and conclusions toward four documented constructions, fichas, cartography, spoken accounts, and operational documentation criteria.
+- Added and imported `estructura/003_introduccion/008_estructura_de_investigacion/estructura_de_investigacion.tex` to make the advisor's research-structure logic explicit.
+- Updated `estructura/005_metodologia/metodologia.tex` with categories of analysis, step-by-step procedure, and a congruence matrix.
+- Cleaned `estructura/003_introduccion/007_justificacion/justificacion.tex` so it does not promise workshops, tourism outputs, restoration, or valuation methods beyond the current descriptive/cartographic scope.
 - Updated `estructura/000_packages/packages.tex` with `\setlength{\headheight}{30pt}` to remove the `fancyhdr` headheight warning.
-- Last successful manuscript build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 41 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull` typography messages and two BibTeX `empty publisher` warnings for older entries.
+- Last successful manuscript build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 45 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull \vbox` typography messages.
 - Generated a separate 10-week planning table in `trabajos/00_control_y_programa/tabla_de_objetivos.tex`; regenerate its PDF from that folder with `latexmk -pdfxe tabla_de_objetivos.tex`.
+- Removed duplicate untracked `trabajos/tabla_de_objetivos.tex`; keep only `trabajos/00_control_y_programa/tabla_de_objetivos.tex`.
+- Completed local bibliography sidecar summaries in `bibliografia_pdf/`: 78 PDFs and 78 matching `.md` files. `bibliografia_pdf/` remains ignored by Git.
+- Removed generated local bibliography concatenation files `bibliografia_pdf/junto.txt` and `bibliografia_pdf/todo_junto.txt`; individual `.md` summaries are the source of truth.
 - Created an operational work folder tree under `trabajos/` for filling the remaining empirical material:
   - `01_corpus_y_datos/` for the master corpus matrix.
   - `02_fichas/` for one folder per construction (`C-01` to `C-04`).
@@ -92,14 +110,11 @@
   - `07_figuras_para_icr/` for final ICR-ready figures only.
   - `08_pendientes_y_revision/` for active checklists.
 - Latest pushed commits on `main`:
-  - `d962daf` `[Updated] streamline marco teorico closures`
-  - `2c9e2ee` `[Updated] restructure manuscript for web catalog`
-  - `385bc6b` `[Updated] fix fancyhdr headheight warning`
-  - `592e373` `[Updated] persist session guidance notes`
-  - `9652abd` `[Updated] remove web product framing`
-  - `eba95c5` `[Updated] align field scope and bajareque naming`
-  - `117a01c` `[New] add ten week objectives table`
-- Current correction after those commits: remove the website/catalog-web framing from the manuscript. Keep the product as fichas, maps, comparative synthesis, and criteria until the website plan is better developed and approved.
+  - `5e7102b` `[New] organize thesis work folders`
+  - `d4df3fc` `[Updated] use ICR institutional naming`
+  - `8343d7e` `[Updated] clean LaTeX bibliography warnings`
+  - `a7e400e` `[Updated] align ICR research structure`
+- Current status after those commits: manuscript is aligned to a non-web, descriptive + cartographic diagnostic and to the advisor-provided Guerrero Baca 2025 structure. Next content expansion depends on user-provided empirical data for C-01 to C-04.
 
 ## Next Steps
 - First action in the next session: ask the user for the missing field data before expanding the diagnosis. Do not invent or fill empirical ficha content without user-provided data.
