@@ -10,6 +10,6 @@ Guardar aquí audios, transcripciones y síntesis por caso.
 
 ## Cuidado
 
-- No incluir nombres reales en archivos que se usarán en tesis.
+- No incluir nombres reales en archivos que se usarán en ICR.
 - Usar códigos de fuente si hace falta: `R-01`, `R-02`, etc.
 - Separar información sensible de información publicable.

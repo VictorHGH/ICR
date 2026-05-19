@@ -4,7 +4,7 @@
 
 - Clave:
 - Comunidad exacta interna:
-- Ubicación generalizada para tesis:
+- Ubicación generalizada para ICR:
 - Sistema constructivo:
 - Uso actual o recordado:
 - Fecha o periodo del registro fotográfico:
@@ -35,7 +35,7 @@
 
 - Persona o fuente codificada:
 - Síntesis del relato:
-- Fragmento útil para tesis:
+- Fragmento útil para ICR:
 - Datos sensibles que deben omitirse:
 
 ## Fotografías
@@ -48,7 +48,7 @@
 
 - Mapa o capa relacionada:
 - Relación con caminos, patios, vegetación o materiales:
-- Nivel de precisión permitido en tesis:
+- Nivel de precisión permitido en ICR:
 
 ## Interpretación breve
 

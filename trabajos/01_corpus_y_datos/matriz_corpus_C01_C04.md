@@ -2,7 +2,7 @@
 
 Completar esta tabla antes de ampliar el capítulo de diagnóstico.
 
-| Clave | Comunidad | Sistema | Uso actual o recordado | Materiales observados | Estado físico | Cambios visibles o relatados | Relato asociado | Fotos publicables | Ubicación para tesis | Pendientes |
+| Clave | Comunidad | Sistema | Uso actual o recordado | Materiales observados | Estado físico | Cambios visibles o relatados | Relato asociado | Fotos publicables | Ubicación para ICR | Pendientes |
 |---|---|---|---|---|---|---|---|---|---|---|
 | C-01 | pendiente | Penca de maguey | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente | generalizada | pendiente |
 | C-02 | pendiente | Piedra local o "tepetate" | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente | generalizada | confirmar material |
@@ -12,7 +12,7 @@ Completar esta tabla antes de ampliar el capítulo de diagnóstico.
 ## Campos mínimos por caso
 
 - Comunidad exacta para análisis interno.
-- Comunidad o ubicación generalizada para tesis.
+- Comunidad o ubicación generalizada para ICR.
 - Uso: cocina, bodega, corral, resguardo, cerramiento u otro.
 - Materiales: muros, cubierta, piso, entramado, recubrimiento, vegetación asociada.
 - Estado: completo, deteriorado, abandonado, modificado, con sustituciones.

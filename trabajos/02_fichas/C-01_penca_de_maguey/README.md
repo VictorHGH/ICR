@@ -9,4 +9,4 @@ Pendiente llenar:
 - Cambios visibles o relatados.
 - Relato asociado.
 - Fotografías publicables e internas.
-- Ubicación generalizada para tesis.
+- Ubicación generalizada para ICR.

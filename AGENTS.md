@@ -1,7 +1,8 @@
 # AGENTS.md
 
 ## Scope
-- This repository is a LaTeX research project; the manuscript entrypoint is `estructura/icr.tex`.
+- This repository is a LaTeX ICR project; ICR means `Idónea Comunicación de Resultados`, the institutional name for this final document. Do not call it `tesis` unless referring to external bibliography or other institutions' documents.
+- The manuscript entrypoint is `estructura/icr.tex`.
 
 ## Build Commands
 - Run from `estructura/` (required for relative paths): `latexmk -pdfxe icr.tex`.
@@ -88,7 +89,7 @@
   - `04_fotografias/` for originals, public selections, internal images, and existing before/after pairs.
   - `05_relatos/` for audios, transcriptions, and case summaries.
   - `06_tablas_y_sintesis/` for comparative tables and pending matrices.
-  - `07_figuras_para_tesis/` for final thesis-ready figures only.
+  - `07_figuras_para_icr/` for final ICR-ready figures only.
   - `08_pendientes_y_revision/` for active checklists.
 - Latest pushed commits on `main`:
   - `d962daf` `[Updated] streamline marco teorico closures`
@@ -113,7 +114,7 @@
 - Step 9: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
 
 ## Immediate User Prompt For Next Session
-- Start by asking: "Para continuar, necesito que llenemos la matriz `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md`. Por cada caso (`C-01` a `C-04`), dime comunidad, uso, materiales, estado físico, cambios visibles o relatados, resumen del relato, fotos publicables/internas y ubicación generalizada para tesis."
+- Start by asking: "Para continuar, necesito que llenemos la matriz `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md`. Por cada caso (`C-01` a `C-04`), dime comunidad, uso, materiales, estado físico, cambios visibles o relatados, resumen del relato, fotos publicables/internas y ubicación generalizada para la ICR."
 - If the user cannot provide everything, ask for one case at a time, starting with `C-01`.
 - Do not start drafting final empirical diagnosis until at least the minimum data for each case is available or explicitly marked as missing.
 
@@ -126,7 +127,7 @@
   - Bajareque: entramado de lechuguilla, relleno con "castillo" y recubrimiento con tierra.
   - Órganos: cerramientos/muros con cactus "órgano" formando un entorno cerrado pero vivo.
 - Common observed condition: floors are usually compacted earth; roofs are often replaced with corrugated sheets (various materials).
-- Privacy/publication: for internal presentations you will use exact locations; for the published thesis/output you will generalize locations and anonymize constructions as needed.
+- Privacy/publication: for internal presentations you will use exact locations; for the published ICR/output you will generalize locations and anonymize constructions as needed.
 
 ## Current Corpus Placeholders
 - `C-01`: penca de maguey; needs final community, photos, location handling, state, use, and spoken account summary.
@@ -137,11 +138,12 @@
 ## Data To Request First
 - For each construction `C-01` to `C-04`, ask for: community, current or remembered use, observed materials, physical state, visible changes, associated spoken account summary, photograph selection/publication permission, and location handling (exact internal vs generalized public).
 - Ask whether there are existing before/after photographs for any case; do not assume a new field visit will happen.
-- Ask which maps already exist as QGIS outputs and which still need to be exported for the thesis.
+- Ask which maps already exist as QGIS outputs and which still need to be exported for the ICR.
 - Confirm cautious naming for `tepetate`; use `bajareque` consistently for `C-03`.
 
 ## Writing Guidance For Next Sessions
 - Use `construcciones tradicionales` as the default unit; avoid reverting to `viviendas` unless discussing prior literature.
+- Use `ICR` or `Idónea Comunicación de Resultados` for this project document; avoid calling it `tesis` in manuscript/workflow text.
 - Keep the tone human and direct, not like a generic methods manual.
 - Avoid adding mini-summaries called `Conclusión de la sección` inside every subsection.
 - Do not reintroduce IVT, socioeconomic surveys, measured architectural drawings, or synthetic indices unless the user explicitly changes the scope.

@@ -13,5 +13,5 @@ Organizar aquí todo el material de QGIS, capas fuente y mapas exportados.
 ## Criterios
 
 - Guardar coordenadas exactas solo para análisis interno.
-- Exportar para tesis con puntos generalizados.
+- Exportar para ICR con puntos generalizados.
 - Nombrar mapas con número y escala: `01_contexto_regional`, `02_comunidades`, etc.

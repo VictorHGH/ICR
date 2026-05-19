@@ -10,7 +10,7 @@ Esta carpeta organiza el material pendiente para cerrar el diagnóstico descript
 4. Clasificar fotografías en `04_fotografias/` y dentro de cada ficha por caso.
 5. Ordenar audios, transcripciones y síntesis en `05_relatos/`.
 6. Completar cuadros comparativos en `06_tablas_y_sintesis/`.
-7. Copiar únicamente las imágenes listas para tesis en `07_figuras_para_tesis/`.
+7. Copiar únicamente las imágenes listas para la ICR en `07_figuras_para_icr/`.
 8. Revisar pendientes en `08_pendientes_y_revision/pendientes.md`.
 
 ## Casos actuales
@@ -23,6 +23,6 @@ Esta carpeta organiza el material pendiente para cerrar el diagnóstico descript
 ## Criterio de privacidad
 
 - Usar coordenadas exactas solo para análisis interno.
-- En la tesis, usar ubicación generalizada.
+- En la ICR, usar ubicación generalizada.
 - No publicar nombres de propietarios ni fotografías sensibles sin autorización.
 - Separar fotografías publicables de fotografías internas.

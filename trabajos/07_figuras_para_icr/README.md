@@ -1,4 +1,4 @@
-# Figuras para tesis
+# Figuras para ICR
 
 Copiar aquí únicamente imágenes listas para insertarse en el documento final.
 

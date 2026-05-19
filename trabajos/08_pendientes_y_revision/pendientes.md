@@ -9,7 +9,7 @@
 - [ ] Definir fotos publicables por caso.
 - [ ] Separar fotos internas/no publicables.
 - [ ] Confirmar resumen de relato por caso.
-- [ ] Confirmar ubicación generalizada para tesis.
+- [ ] Confirmar ubicación generalizada para ICR.
 - [ ] Confirmar mapas ya exportados desde QGIS.
 - [ ] Confirmar si existen fotografías antes/después.
 

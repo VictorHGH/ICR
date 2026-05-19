@@ -4,7 +4,7 @@ Cada caso tiene su propia carpeta. Copiar `plantilla_ficha.md` dentro de cada ca
 
 ## Estructura por caso
 
-- `fotografias_publicables/`: imágenes que sí pueden usarse en tesis o presentación.
+- `fotografias_publicables/`: imágenes que sí pueden usarse en la ICR o presentación.
 - `fotografias_internas/`: imágenes útiles para análisis pero no publicables.
 - `relatos/`: audio, transcripción o síntesis del testimonio asociado.
 - `mapas/`: recortes o exportaciones cartográficas específicas del caso.
