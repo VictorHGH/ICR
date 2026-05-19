@@ -79,22 +79,43 @@
   - `estructura/009_conclusiones/conclusiones.tex`
 - Reoriented the objective, questions, methodology, and conclusions toward four documented constructions, fichas, cartography, spoken accounts, and operational documentation criteria.
 - Updated `estructura/000_packages/packages.tex` with `\setlength{\headheight}{30pt}` to remove the `fancyhdr` headheight warning.
-- Last successful build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 42 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull` typography messages and two BibTeX `empty publisher` warnings for older entries.
+- Last successful manuscript build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 41 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull` typography messages and two BibTeX `empty publisher` warnings for older entries.
+- Generated a separate 10-week planning table in `trabajos/00_control_y_programa/tabla_de_objetivos.tex`; regenerate its PDF from that folder with `latexmk -pdfxe tabla_de_objetivos.tex`.
+- Created an operational work folder tree under `trabajos/` for filling the remaining empirical material:
+  - `01_corpus_y_datos/` for the master corpus matrix.
+  - `02_fichas/` for one folder per construction (`C-01` to `C-04`).
+  - `03_cartografia/` for QGIS project files, source layers, and exported maps.
+  - `04_fotografias/` for originals, public selections, internal images, and existing before/after pairs.
+  - `05_relatos/` for audios, transcriptions, and case summaries.
+  - `06_tablas_y_sintesis/` for comparative tables and pending matrices.
+  - `07_figuras_para_tesis/` for final thesis-ready figures only.
+  - `08_pendientes_y_revision/` for active checklists.
 - Latest pushed commits on `main`:
   - `d962daf` `[Updated] streamline marco teorico closures`
   - `2c9e2ee` `[Updated] restructure manuscript for web catalog`
   - `385bc6b` `[Updated] fix fancyhdr headheight warning`
   - `592e373` `[Updated] persist session guidance notes`
+  - `9652abd` `[Updated] remove web product framing`
+  - `eba95c5` `[Updated] align field scope and bajareque naming`
+  - `117a01c` `[New] add ten week objectives table`
 - Current correction after those commits: remove the website/catalog-web framing from the manuscript. Keep the product as fichas, maps, comparative synthesis, and criteria until the website plan is better developed and approved.
 
 ## Next Steps
 - First action in the next session: ask the user for the missing field data before expanding the diagnosis. Do not invent or fill empirical ficha content without user-provided data.
-- Fill the empirical diagnosis for `C-01` to `C-04` with real field data: community, use, materials, state, observed changes, associated spoken account, photographs, and generalized location.
-- Select which photographs can be published and which must remain internal.
-- Prepare maps for the diagnostic chapter: regional context, communities, generalized construction locations, routes, and relation to local materials.
-- Expand `007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` from placeholders into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
-- Refine `008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
-- Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
+- Step 1: Open `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md` and ask the user to fill or provide the missing fields for `C-01` to `C-04`.
+- Step 2: Ask the user to place or identify photographs in `trabajos/04_fotografias/` and in each case folder under `trabajos/02_fichas/`, separating `fotografias_publicables` from `fotografias_internas`.
+- Step 3: Ask the user to place or identify relato material in `trabajos/05_relatos/` and/or each case folder's `relatos/` directory: audio, transcript, notes, or a short spoken-account summary.
+- Step 4: Ask the user to place or identify QGIS material and exported maps in `trabajos/03_cartografia/`: source layers, generalized points, routes, context maps, and material-proximity maps.
+- Step 5: Once data is provided, fill the case folders using `trabajos/02_fichas/plantilla_ficha.md` as the structure. Keep unknown items marked as `pendiente`.
+- Step 6: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` and `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`.
+- Step 7: Only after steps 1-6, expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
+- Step 8: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
+- Step 9: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
+
+## Immediate User Prompt For Next Session
+- Start by asking: "Para continuar, necesito que llenemos la matriz `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md`. Por cada caso (`C-01` a `C-04`), dime comunidad, uso, materiales, estado físico, cambios visibles o relatados, resumen del relato, fotos publicables/internas y ubicación generalizada para tesis."
+- If the user cannot provide everything, ask for one case at a time, starting with `C-01`.
+- Do not start drafting final empirical diagnosis until at least the minimum data for each case is available or explicitly marked as missing.
 
 ## Confirmed Inputs (2026-04-21)
 - Case count: 4 traditional constructions documented (photos + location + at least one spoken account).
