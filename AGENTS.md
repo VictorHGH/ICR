@@ -46,6 +46,37 @@
 - After content/citation changes, run `latexmk -pdfxe icr.tex` from `estructura/` and check for unresolved citations/references.
 - Avoid renaming files/folders with accented names unless all related import paths are updated.
 
+## QGIS Project And MCP Setup
+- Active portable QGIS project: `trabajos/03_cartografia/01_qgis_proyecto/mapa_general_icr.qgz`.
+- The active QGIS project was saved with relative path storage; keep cartographic sources under `trabajos/03_cartografia/02_capas_fuente/` so the project can move between computers.
+- Do not use `trabajos/mapas/mapaGeneral/Mapa general nuevo.qgz` as the active project; it was the older local project location before portability cleanup.
+- Start QGIS first, load the active project, and then start/restart opencode so MCP tools can connect.
+- Expected QGIS MCP socket when working: `127.0.0.1:9876`.
+- `opencode.json` is configured with a local MCP server named `qgis` using `uvx --from git+https://github.com/nkarasiak/qgis-mcp.git qgis-mcp-server`.
+- On a new computer, install `uv`/`uvx` first. A typical install is `curl -LsSf https://astral.sh/uv/install.sh | sh`, then ensure `uvx` is on `PATH`.
+- If `uvx` is not found by opencode, run `which uvx` and either add that directory to `PATH` before launching opencode or change the first command entry in `opencode.json` from `uvx` to the absolute path reported by `which uvx`.
+- The QGIS-side MCP plugin must also be installed and enabled in the active QGIS profile. In this machine it lives under `/home/victorhgh/.local/share/QGIS/QGIS4/profiles/default/python/plugins/qgis_mcp_plugin/`; on another computer use the equivalent QGIS profile plugin folder or install it from the `qgis-mcp` project instructions.
+- If MCP fails, diagnose in this order: QGIS is open, the plugin is enabled, the plugin server is listening on `127.0.0.1:9876`, `uvx` works in the shell, then restart opencode.
+
+## Current QGIS/Cartography State (updated 2026-05-27)
+- Active project file: `trabajos/03_cartografia/01_qgis_proyecto/mapa_general_icr.qgz`.
+- Current QGIS version used: `QGIS 4.0.2-Norrköping`.
+- Current layouts in the active project:
+  - `PL-01_Contexto_Mexico_Hidalgo`: Mexico context with Hidalgo highlighted in red; uses a dedicated duplicated layer named `Hidalgo` so its legend does not drift when other maps restyle the Hidalgo boundary layer.
+  - `PL-02_Hidalgo_Cardonal`: Hidalgo/Cardonal context with Valle del Mezquital; native legend; municipality table split into two native attribute tables (`VM_NUM <= 14` and `VM_NUM >= 15`) with larger type.
+  - `PL-03_Cardonal_Comunidades`: Cardonal community context with `El Deca / El Buena` polygons and perimeter labels.
+- Layout maps are locked and store their own layer sets/styles. If a layer style is changed globally, re-store current layer styles in the affected layout map before saving.
+- Save the QGIS project after every substantial layout edit because a prior QGIS crash lost memory-layer layout work.
+- Persistent derived GeoPackage: `trabajos/03_cartografia/02_capas_fuente/contexto/regiones/icr_capas_derivadas.gpkg`.
+- Persistent Mexico context layer: `trabajos/03_cartografia/02_capas_fuente/contexto/regiones/mexico_entidades_federativas.gpkg`.
+- Persistent construction points layer: `trabajos/03_cartografia/02_capas_fuente/puntos_construcciones/construcciones_tradicionales.gpkg` with internal layer `Viviendas`.
+- Persistent INEGI Hidalgo source layers: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/01_shp_originales/` and working package `02_gpkg_trabajo/inegi_13_hidalgo_contexto.gpkg`.
+- Persistent topographic derivatives: `trabajos/03_cartografia/02_capas_fuente/contexto/topografia_hidalgo/mde_cem_15m/derivados/`.
+- The original full Hidalgo MDE `13_Hidalgo_r15m_v4.tif` is intentionally not versioned because it is about 169 MB; use the committed Cardonal derivatives instead or reacquire the original from INEGI if a new derivative is needed.
+- `trabajos/mapas/` is now treated as a local raw/source dump and is ignored by Git; do not make the active QGIS project depend on it.
+- `trabajos/Fotos/` is ignored as a local raw photo dump. Case-level public selections live under `trabajos/02_fichas/*/fotografias_publicables/`.
+- There is one leftover empty memory layer from the crash named `El Deca`; it is not needed by the layouts. Remove it only if the user approves cleanup.
+
 ## Current Direction (updated 2026-05-19)
 - Research focus is now an ICR-style, practical, descriptive output aligned with Guerrero Baca 2025 research-structure guidance and Guerrero Baca-oriented ICR patterns: concrete case, diagnostic core, fichas, cartography, criteria, and an operational product.
 - The manuscript now makes the structure explicit: problemática, objeto de estudio, unidad de análisis, categorías, evidencia, procedimiento, producto and alcance.
@@ -78,6 +109,11 @@
   - a matriz de congruencia linking questions, objectives, techniques, and products.
 
 ## Recent Repo Changes (session notes)
+- Rebuilt and saved QGIS layouts `PL-01`, `PL-02`, and `PL-03` after a QGIS crash.
+- Corrected `PL-01` so Hidalgo has its own red highlighted layer and matching legend entry.
+- Adjusted `PL-02` so the Valle del Mezquital municipality table is split into two larger native QGIS attribute tables.
+- Saved a portable QGIS project at `trabajos/03_cartografia/01_qgis_proyecto/mapa_general_icr.qgz` and moved project dependencies away from the local `trabajos/mapas/` dump where possible.
+- Updated MCP guidance: opencode uses `uvx` to launch `qgis-mcp-server`; the QGIS plugin must be installed/enabled separately in QGIS.
 - Moved/placed the "zombi de la modernidad" concept into the theoretical chapter (tipologías de valor) and removed it from the introductory context.
 - Improved table typography to reduce Overfull/Underfull hbox warnings by introducing ragged-right `L{}` columns (`array` + `\newcolumntype`).
 - Updated research questions, objectives, methodology, and operational tables to align with a descriptive + cartographic diagnostic (removed IVT and socio-economic survey dependencies).

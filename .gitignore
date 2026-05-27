@@ -1,6 +1,7 @@
 estructura_anterior/
 bibliografia_anterior/
 .DS_Store
+._*
 *.aux
 *.log
 *.out
@@ -19,5 +20,9 @@ bibliografia_anterior/
 *.pyg
 *.synctex(busy)
 *.synctex.gz(busy)
+*.aux.xml
 *.pdf
 bibliografia_pdf/
+trabajos/Fotos/
+trabajos/mapas/
+trabajos/03_cartografia/02_capas_fuente/contexto/topografia_hidalgo/mde_cem_15m/13_Hidalgo_r15m_v4.tif
