@@ -21,6 +21,8 @@ bibliografia_anterior/
 *.synctex(busy)
 *.synctex.gz(busy)
 *.aux.xml
+*.gpkg-shm
+*.gpkg-wal
 *.pdf
 bibliografia_pdf/
 trabajos/Fotos/

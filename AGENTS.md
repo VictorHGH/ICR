@@ -71,6 +71,7 @@
 - Persistent Mexico context layer: `trabajos/03_cartografia/02_capas_fuente/contexto/regiones/mexico_entidades_federativas.gpkg`.
 - Persistent construction points layer: `trabajos/03_cartografia/02_capas_fuente/puntos_construcciones/construcciones_tradicionales.gpkg` with internal layer `Viviendas`.
 - Persistent INEGI Hidalgo source layers: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/01_shp_originales/` and working package `02_gpkg_trabajo/inegi_13_hidalgo_contexto.gpkg`.
+- Persistent Cardonal street layer: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/02_gpkg_trabajo/vialidades_cardonal_13e.gpkg`; derived from raw INEGI `13e` ejes de vialidad filtered to `CVE_MUN = 015`; used in `PL-03`.
 - Persistent topographic derivatives: `trabajos/03_cartografia/02_capas_fuente/contexto/topografia_hidalgo/mde_cem_15m/derivados/`.
 - The original full Hidalgo MDE `13_Hidalgo_r15m_v4.tif` is intentionally not versioned because it is about 169 MB; use the committed Cardonal derivatives instead or reacquire the original from INEGI if a new derivative is needed.
 - `trabajos/mapas/` is now treated as a local raw/source dump and is ignored by Git; do not make the active QGIS project depend on it.

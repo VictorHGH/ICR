@@ -10,6 +10,7 @@ Organizar aquí todo el material de QGIS, capas fuente y mapas exportados.
 - Capas fuente necesarias para los layouts actuales están dentro de `02_capas_fuente/`.
 - `02_capas_fuente/puntos_construcciones/construcciones_tradicionales.gpkg` contiene la capa interna `Viviendas` con puntos exactos; no publicar coordenadas exactas.
 - `02_capas_fuente/contexto/regiones/mexico_entidades_federativas.gpkg` sustituye al `00ent.shp` local anterior.
+- `02_capas_fuente/contexto/inegi_13_hidalgo/02_gpkg_trabajo/vialidades_cardonal_13e.gpkg` contiene una derivada ligera de `13e` solo para Cardonal; se usa en `PL-03` para mostrar calles a escala comunitaria.
 
 ## Qué debe salir de esta carpeta
 
