@@ -171,7 +171,8 @@
 - Do not start drafting final empirical diagnosis until at least the minimum data for each case is available or explicitly marked as missing.
 
 ## Confirmed Inputs (2026-04-21)
-- Case count: 4 traditional constructions documented (photos + location + at least one spoken account).
+- The field record includes several traditional constructions, but the ICR will analyze 4 selected cases/systems because they are the most original examples found in morphology and traditional materials. Do not write as if only four constructions were registered in total.
+- Case count for the diagnostic corpus: 4 selected traditional construction cases (photos + location + at least one spoken account).
 - Unit of analysis wording: prefer \emph{construcciones} (not \emph{viviendas}), since what remains standing are mainly kitchens or storage buildings.
 - Provisional construction systems to classify (goal: 4 systems across 2 communities):
   - Penca de maguey: muros con entramado de quiote de lechuguilla y recubrimiento de pencas de maguey.
@@ -182,10 +183,11 @@
 - Privacy/publication: for internal presentations you will use exact locations; for the published ICR/output you will generalize locations and anonymize constructions as needed.
 
 ## Current Corpus Placeholders
-- `C-01`: penca de maguey; needs final community, photos, location handling, state, use, and spoken account summary.
-- `C-02`: piedra local or "tepetate"; keep the wording cautious because material characterization is pending.
-- `C-03`: bajareque; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
-- `C-04`: órganos; treat as living or semi-living enclosure/cerramiento, not necessarily a conventional building.
+- `C-01`: penca de maguey; corresponds to `Viviendas` `fid=10`, `id=11`; needs final community, location handling, state, use confirmation, and spoken account summary.
+- `C-02`: piedra local or "tepetate"; corresponds to `Viviendas` `fid=3`, `id=4`; keep the wording cautious because material characterization is pending.
+- `C-03`: bajareque; corresponds to `Viviendas` `fid=5`, `id=6`; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
+- `C-04`: órganos; corresponds to `Viviendas` `fid=2`, `id=3`; treat as living or semi-living enclosure/cerramiento, not necessarily a conventional building.
+- The `Viviendas` GeoPackage now has helper fields `caso_icr`, `sistema_icr`, and `seleccion_icr` for these four selected cases. Use `seleccion_icr = 1` to symbolize the diagnostic corpus; other points are registered constructions but not the four selected systems.
 
 ## Data To Request First
 - For each construction `C-01` to `C-04`, ask for: community, current or remembered use, observed materials, physical state, visible changes, associated spoken account summary, photograph selection/publication permission, and location handling (exact internal vs generalized public).
