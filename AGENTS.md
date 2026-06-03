@@ -58,13 +58,14 @@
 - The QGIS-side MCP plugin must also be installed and enabled in the active QGIS profile. In this machine it lives under `/home/victorhgh/.local/share/QGIS/QGIS4/profiles/default/python/plugins/qgis_mcp_plugin/`; on another computer use the equivalent QGIS profile plugin folder or install it from the `qgis-mcp` project instructions.
 - If MCP fails, diagnose in this order: QGIS is open, the plugin is enabled, the plugin server is listening on `127.0.0.1:9876`, `uvx` works in the shell, then restart opencode.
 
-## Current QGIS/Cartography State (updated 2026-05-27)
+## Current QGIS/Cartography State (updated 2026-06-03)
 - Active project file: `trabajos/03_cartografia/01_qgis_proyecto/mapa_general_icr.qgz`.
 - Current QGIS version used: `QGIS 4.0.2-Norrköping`.
 - Current layouts in the active project:
   - `PL-01_Contexto_Mexico_Hidalgo`: Mexico context with Hidalgo highlighted in red; uses a dedicated duplicated layer named `Hidalgo` so its legend does not drift when other maps restyle the Hidalgo boundary layer.
   - `PL-02_Hidalgo_Cardonal`: Hidalgo/Cardonal context with Valle del Mezquital; native legend; municipality table split into two native attribute tables (`VM_NUM <= 14` and `VM_NUM >= 15`) with larger type.
   - `PL-03_Cardonal_Comunidades`: Cardonal community context with `El Deca / El Buena` polygons and perimeter labels.
+  - `PL-04_Construcciones_Registradas`: local map of registered constructions and the four selected ICR cases; includes INEGI roads plus vector OSM roads as complementary access traces.
 - Layout maps are locked and store their own layer sets/styles. If a layer style is changed globally, re-store current layer styles in the affected layout map before saving.
 - Save the QGIS project after every substantial layout edit because a prior QGIS crash lost memory-layer layout work.
 - Persistent derived GeoPackage: `trabajos/03_cartografia/02_capas_fuente/contexto/regiones/icr_capas_derivadas.gpkg`.
@@ -72,11 +73,22 @@
 - Persistent construction points layer: `trabajos/03_cartografia/02_capas_fuente/puntos_construcciones/construcciones_tradicionales.gpkg` with internal layer `Viviendas`.
 - Persistent INEGI Hidalgo source layers: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/01_shp_originales/` and working package `02_gpkg_trabajo/inegi_13_hidalgo_contexto.gpkg`.
 - Persistent Cardonal street layer: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/02_gpkg_trabajo/vialidades_cardonal_13e.gpkg`; derived from raw INEGI `13e` ejes de vialidad filtered to `CVE_MUN = 015`; used in `PL-03`.
+- Persistent OSM roads layer: `trabajos/03_cartografia/02_capas_fuente/contexto/osm/caminos_osm_el_deca_el_buena.gpkg`, internal layer `Caminos OSM El Deca-El Buena`; downloaded from Overpass for the El Deca/El Buena area and used in `PL-04` as complementary road/access evidence.
+- `PL-04` road layers: `Vialidades INEGI`, `Puentes INEGI`, `Carreteras INEGI`, `Terracerias INEGI`, `Veredas INEGI`, and `Caminos OSM`. The OSM layer is drawn below INEGI road layers so it reads as complementary rather than replacing official data.
+- `PL-04` uses exact/internal construction points; public ICR export still needs location generalization or privacy approval before publication.
 - Persistent topographic derivatives: `trabajos/03_cartografia/02_capas_fuente/contexto/topografia_hidalgo/mde_cem_15m/derivados/`.
 - The original full Hidalgo MDE `13_Hidalgo_r15m_v4.tif` is intentionally not versioned because it is about 169 MB; use the committed Cardonal derivatives instead or reacquire the original from INEGI if a new derivative is needed.
 - `trabajos/mapas/` is now treated as a local raw/source dump and is ignored by Git; do not make the active QGIS project depend on it.
 - `trabajos/Fotos/` is ignored as a local raw photo dump. Case-level public selections live under `trabajos/02_fichas/*/fotografias_publicables/`.
 - There is one leftover empty memory layer from the crash named `El Deca`; it is not needed by the layouts. Remove it only if the user approves cleanup.
+
+## Current Cartographic Interpretation Notes (updated 2026-06-03)
+- All 10 registered construction points fall inside the municipality of Cardonal according to the official municipal layer.
+- `C-02`, `C-04`, and one additional gray registered point fall outside the official INEGI locality polygons for `El Deca`/`El Buena`, but the owners identify as belonging to `El Deca`; record this as a distinction between official geo-statistical perimeter and local community affiliation.
+- In manuscript language, use `adscripción comunitaria` or `pertenencia comunitaria` for this local recognition, and distinguish it from `perímetro geoestadístico de localidad`.
+- The manuscript now states that maps triangulate official cartography, collaborative OSM cartography, and local accounts rather than treating a boundary or road layer as exhaustive proof of community belonging.
+- OSM vector roads are much closer to the `C-02`/`C-04` access traces than INEGI 13sil roads; approximate distances found: gray point `~4.3 m`, `C-04` `~17.1 m`, `C-02` `~22.8 m` from nearest OSM road.
+- Keep this interpretive point in the diagnosis: INEGI locality limits and road layers are institutional representations; they do not fully capture territory lived through ownership, family relations, daily access, memory, and local recognition.
 
 ## Current Direction (updated 2026-05-19)
 - Research focus is now an ICR-style, practical, descriptive output aligned with Guerrero Baca 2025 research-structure guidance and Guerrero Baca-oriented ICR patterns: concrete case, diagnostic core, fichas, cartography, criteria, and an operational product.
@@ -132,7 +144,7 @@
 - Updated `estructura/005_metodologia/metodologia.tex` with categories of analysis, step-by-step procedure, and a congruence matrix.
 - Cleaned `estructura/003_introduccion/007_justificacion/justificacion.tex` so it does not promise workshops, tourism outputs, restoration, or valuation methods beyond the current descriptive/cartographic scope.
 - Updated `estructura/000_packages/packages.tex` with `\setlength{\headheight}{30pt}` to remove the `fancyhdr` headheight warning.
-- Last successful manuscript build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 45 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull \vbox` typography messages.
+- Last successful manuscript build: `latexmk -pdfxe icr.tex` from `estructura/`; output was 47 pages. No critical errors, no undefined citations, and no undefined references. Remaining warnings are minor `Underfull \vbox` typography messages.
 - Generated a separate 10-week planning table in `trabajos/00_control_y_programa/tabla_de_objetivos.tex`; regenerate its PDF from that folder with `latexmk -pdfxe tabla_de_objetivos.tex`.
 - Removed duplicate untracked `trabajos/tabla_de_objetivos.tex`; keep only `trabajos/00_control_y_programa/tabla_de_objetivos.tex`.
 - Completed local bibliography sidecar summaries in `bibliografia_pdf/`: 78 PDFs and 78 matching `.md` files. `bibliografia_pdf/` remains ignored by Git.
@@ -147,23 +159,32 @@
   - `07_figuras_para_icr/` for final ICR-ready figures only.
   - `08_pendientes_y_revision/` for active checklists.
 - Latest pushed commits on `main`:
-  - `5e7102b` `[New] organize thesis work folders`
-  - `d4df3fc` `[Updated] use ICR institutional naming`
-  - `8343d7e` `[Updated] clean LaTeX bibliography warnings`
-  - `a7e400e` `[Updated] align ICR research structure`
-- Current status after those commits: manuscript is aligned to a non-web, descriptive + cartographic diagnostic and to the advisor-provided Guerrero Baca 2025 structure. Next content expansion depends on user-provided empirical data for C-01 to C-04.
+  - `297ada9` `[Updated] map selected ICR cases`
+  - `110fa33` `[Updated] refine PL-03 community map`
+  - `408775a` `[Updated] save QGIS portable project`
+  - `77b1b27` `[Updated] add portable QGIS workspace`
+- Current status after those commits: manuscript is aligned to a non-web, descriptive + cartographic diagnostic and to the advisor-provided Guerrero Baca 2025 structure. `PL-04` is now the active construction-points map; next cartographic work is `PL-05`.
+
+## Latest Session Changes (2026-06-03)
+- Replaced Helvetica/Sans Serif/Arial references in QGIS labels/layout items with `Liberation Sans`; local font availability confirmed with `fc-match 'Liberation Sans'`.
+- Created `PL-04_Construcciones_Registradas` from `PL-03`, then user-adjusted visual details; final map shows all registered constructions and highlights `C-01` to `C-04`.
+- Corrected `PL-04` locator to show the previous `PL-03` community context instead of an incorrect CRS-shifted view.
+- Added INEGI `13sil` road/service-line variants as separate layers for visual comparison: `Puentes INEGI`, `Carreteras INEGI`, `Terracerias INEGI`, `Veredas INEGI`; the empty `INEGI 13sil - brechas/peatonales` layer remains loaded but is not useful.
+- Downloaded OSM vector roads from Overpass and saved them under `trabajos/03_cartografia/02_capas_fuente/contexto/osm/`; `Caminos OSM` is now used in `PL-04` as a complementary access layer below INEGI roads.
+- Updated `estructura/006_caso_de_estudio_y_corpus/caso_de_estudio_y_corpus.tex` and `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` to explain the difference between official locality perimeters and local community affiliation.
 
 ## Next Steps
-- First action in the next session: ask the user for the missing field data before expanding the diagnosis. Do not invent or fill empirical ficha content without user-provided data.
-- Step 1: Open `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md` and ask the user to fill or provide the missing fields for `C-01` to `C-04`.
-- Step 2: Ask the user to place or identify photographs in `trabajos/04_fotografias/` and in each case folder under `trabajos/02_fichas/`, separating `fotografias_publicables` from `fotografias_internas`.
-- Step 3: Ask the user to place or identify relato material in `trabajos/05_relatos/` and/or each case folder's `relatos/` directory: audio, transcript, notes, or a short spoken-account summary.
-- Step 4: Ask the user to place or identify QGIS material and exported maps in `trabajos/03_cartografia/`: source layers, generalized points, routes, context maps, and material-proximity maps.
-- Step 5: Once data is provided, fill the case folders using `trabajos/02_fichas/plantilla_ficha.md` as the structure. Keep unknown items marked as `pendiente`.
-- Step 6: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` and `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`.
-- Step 7: Only after steps 1-6, expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
-- Step 8: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
-- Step 9: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
+- First action in the next session: if continuing cartography, work on `PL-05_Relacion_Materiales_Territorio`; if continuing manuscript diagnosis, ask for the missing field data before expanding fichas. Do not invent or fill empirical ficha content without user-provided data.
+- Step 1: For cartography, create `PL-05_Relacion_Materiales_Territorio` using `Uso suelo vegetacion Cardonal`, `Sombreado relieve Cardonal`, selected cases (`seleccion_icr = 1`), communities, paths/roads, and possibly subtle contours if they do not saturate the map.
+- Step 2: For empirical content, open `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md` and ask the user to fill or provide the missing fields for `C-01` to `C-04`.
+- Step 3: Ask the user to place or identify photographs in `trabajos/04_fotografias/` and in each case folder under `trabajos/02_fichas/`, separating `fotografias_publicables` from `fotografias_internas`.
+- Step 4: Ask the user to place or identify relato material in `trabajos/05_relatos/` and/or each case folder's `relatos/` directory: audio, transcript, notes, or a short spoken-account summary.
+- Step 5: Ask the user to place or identify QGIS material and exported maps in `trabajos/03_cartografia/`: source layers, generalized points, routes, context maps, and material-proximity maps.
+- Step 6: Once data is provided, fill the case folders using `trabajos/02_fichas/plantilla_ficha.md` as the structure. Keep unknown items marked as `pendiente`.
+- Step 7: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` and `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`.
+- Step 8: Only after steps 1-7, expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
+- Step 9: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
+- Step 10: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
 
 ## Immediate User Prompt For Next Session
 - Start by asking: "Para continuar, necesito que llenemos la matriz `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md`. Por cada caso (`C-01` a `C-04`), dime comunidad, uso, materiales, estado físico, cambios visibles o relatados, resumen del relato, fotos publicables/internas y ubicación generalizada para la ICR."

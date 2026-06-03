@@ -30,7 +30,7 @@ Capas de contexto tomadas del Marco Geoestadistico INEGI, septiembre 2019, solo 
 
 ## Capas no copiadas por ahora
 
-- `13e`: ejes de vialidad; muy pesada, usar solo si hace falta detalle vial.
+- `13e`: ejes de vialidad; la capa completa es muy pesada, pero existe una derivada filtrada a Cardonal en `02_gpkg_trabajo/vialidades_cardonal_13e.gpkg`.
 - `13m`: manzanas; demasiado detallada para los mapas previstos.
 - `13fm`: frentes de manzana; no necesaria para la ICR.
 - `13a`: AGEB urbanas; secundaria para el enfoque rural actual.
@@ -39,3 +39,10 @@ Capas de contexto tomadas del Marco Geoestadistico INEGI, septiembre 2019, solo 
 ## Fuente original
 
 La descarga original se conserva en `trabajos/mapas/13_hidalgo/`.
+
+## Uso actual en layouts
+
+- `PL-03` usa `vialidades_cardonal_13e.gpkg` para calles/ejes de vialidad a escala comunitaria.
+- `PL-04` usa `servicios_linea_13sil` como capas separadas de comparación: `Puentes INEGI`, `Carreteras INEGI`, `Terracerias INEGI` y `Veredas INEGI`.
+- La capa `INEGI 13sil - brechas/peatonales` quedó cargada para revisión, pero actualmente no tiene entidades filtradas en Cardonal.
+- Los caminos de INEGI no representan todos los accesos usados localmente; para `PL-04` se añadió una capa vectorial OSM complementaria guardada en `../osm/`.
