@@ -177,23 +177,26 @@
 - Updated `estructura/006_caso_de_estudio_y_corpus/caso_de_estudio_y_corpus.tex` and `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` to explain the difference between official locality perimeters and local community affiliation.
 - Created and refined `PL-05_Relacion_Materiales_Territorio`. Main map uses communities as visible contours over vegetation so the material-territory reading remains clear; the locator uses the `PL-04` main-map layer set/styles as prior-reference context.
 - Removed the temporary `Comunidad El Deca (ref)` and `Comunidad El Buena (ref)` memory layers from `PL-05`; the layout now depends only on persistent layers. The old unused memory layer `El Deca` remains loaded and should only be removed with user approval.
+- Completed `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md` with community, system, use, materials, qualitative physical state, visible/related changes, spoken-account synthesis, public-photo folder, and generalized location by community for `C-01` to `C-04`.
+- Filled the base case fichas in `trabajos/02_fichas/*/README.md` from the corpus matrix. Each ficha now includes identification, materials, physical state, changes, relato, photo folders, cartography, brief interpretation, and remaining ampliation-only notes.
+- Decided not to use a single coded physical-state field because it would flatten the material, morphological, social, and narrative depth of each traditional construction. Use qualitative descriptions instead.
+- For `C-02`, use `piedra local / tepetate`: respect the community term `tepetate`, but avoid claiming a petrographic classification because no petrographic analysis will be done.
+- Public ICR location handling for the four cases is generalized by community; exact coordinates remain internal in QGIS only.
+- Latest pushed commits include `9e8fd5a [Updated] add PL-05 materials map` and `137f1dc [Updated] complete corpus matrix`.
 
 ## Next Steps
-- First action in the next session: if continuing cartography, decide whether the two not-yet-built planned maps are still needed; if continuing manuscript diagnosis, ask for the missing field data before expanding fichas. Do not invent or fill empirical ficha content without user-provided data.
-- Step 1: For empirical content, open `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md` and ask the user to fill or provide the missing fields for `C-01` to `C-04`.
-- Step 2: Ask the user to place or identify photographs in `trabajos/04_fotografias/` and in each case folder under `trabajos/02_fichas/`, separating `fotografias_publicables` from `fotografias_internas`.
-- Step 3: Ask the user to place or identify relato material in `trabajos/05_relatos/` and/or each case folder's `relatos/` directory: audio, transcript, notes, or a short spoken-account summary.
-- Step 4: Ask the user to place or identify QGIS material and exported maps in `trabajos/03_cartografia/`: source layers, generalized points, routes, context maps, and material-proximity maps.
-- Step 5: Once data is provided, fill the case folders using `trabajos/02_fichas/plantilla_ficha.md` as the structure. Keep unknown items marked as `pendiente`.
-- Step 6: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` and `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`.
-- Step 7: Only after steps 1-6, expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` into actual fichas for `C-01`, `C-02`, `C-03`, and `C-04`.
-- Step 8: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
-- Step 9: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
+- First action in the next session: create/fill `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` from the completed matrix and fichas. Compare systems, materials, use, physical state, changes, relato themes, territorial relation, and conservation implications.
+- Step 1: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md`.
+- Step 2: Complete or revise `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`; most base data is complete, so remaining notes should focus on optional ficha ampliation, public-image selection, and manuscript insertion.
+- Step 3: Expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` using the matrix, fichas, and maps `PL-04`/`PL-05`.
+- Step 4: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
+- Step 5: Decide whether maps `PL-06` and `PL-07` are actually needed. Do not create them automatically; likely options are access/route context and operational synthesis/ficha cartografica.
+- Step 6: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
 
 ## Immediate User Prompt For Next Session
-- Start by asking: "Para continuar, necesito que llenemos la matriz `trabajos/01_corpus_y_datos/matriz_corpus_C01_C04.md`. Por cada caso (`C-01` a `C-04`), dime comunidad, uso, materiales, estado físico, cambios visibles o relatados, resumen del relato, fotos publicables/internas y ubicación generalizada para la ICR."
-- If the user cannot provide everything, ask for one case at a time, starting with `C-01`.
-- Do not start drafting final empirical diagnosis until at least the minimum data for each case is available or explicitly marked as missing.
+- Start by saying: "La matriz y las fichas base ya están completas. El siguiente paso es hacer el cuadro comparativo de sistemas en `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` y luego pasar ese contenido al capítulo de diagnóstico."
+- If the user wants to continue writing, work from the completed fichas and matrix; do not ask again for data already captured unless a contradiction appears.
+- Do not expose exact coordinates, owners, or sensitive identifying information in the manuscript.
 
 ## Confirmed Inputs (2026-04-21)
 - The field record includes several traditional constructions, but the ICR will analyze 4 selected cases/systems because they are the most original examples found in morphology and traditional materials. Do not write as if only four constructions were registered in total.
@@ -208,17 +211,16 @@
 - Privacy/publication: for internal presentations you will use exact locations; for the published ICR/output you will generalize locations and anonymize constructions as needed.
 
 ## Current Corpus Placeholders
-- `C-01`: penca de maguey; corresponds to `Viviendas` `fid=10`, `id=11`; needs final community, location handling, state, use confirmation, and spoken account summary.
-- `C-02`: piedra local or "tepetate"; corresponds to `Viviendas` `fid=3`, `id=4`; keep the wording cautious because material characterization is pending.
-- `C-03`: bajareque; corresponds to `Viviendas` `fid=5`, `id=6`; document entramado, relleno, recubrimiento, maintenance/loss, and related narratives.
-- `C-04`: órganos; corresponds to `Viviendas` `fid=2`, `id=3`; treat as living or semi-living enclosure/cerramiento, not necessarily a conventional building.
+- `C-01`: penca de maguey; corresponds to `Viviendas` `fid=10`, `id=11`; community El Buena; used as pulque-related bodega; key themes are maintenance of pencas, lunar cutting knowledge, decline of pulque consumption, and material adequacy through floor/roof changes.
+- `C-02`: piedra local / tepetate; corresponds to `Viviendas` `fid=3`, `id=4`; community El Deca by local affiliation; use as bodega/corral context after former habitation; keep `tepetate` as community term and avoid petrographic certainty.
+- `C-03`: bajareque; corresponds to `Viviendas` `fid=5`, `id=6`; community El Buena; kitchen with fogon; highest morphological permanence; key themes are taste, affective attachment, risk of demolition after user dies, and `castillo` as locally available infill.
+- `C-04`: órganos; corresponds to `Viviendas` `fid=2`, `id=3`; community El Deca by local affiliation; kitchen/storage space; treat as living or semi-living enclosure, not a conventional building; key themes are transplant timing after full moon, size selection, local abundance, and partial replacement after organ death.
 - The `Viviendas` GeoPackage now has helper fields `caso_icr`, `sistema_icr`, and `seleccion_icr` for these four selected cases. Use `seleccion_icr = 1` to symbolize the diagnostic corpus; other points are registered constructions but not the four selected systems.
 
 ## Data To Request First
-- For each construction `C-01` to `C-04`, ask for: community, current or remembered use, observed materials, physical state, visible changes, associated spoken account summary, photograph selection/publication permission, and location handling (exact internal vs generalized public).
-- Ask whether there are existing before/after photographs for any case; do not assume a new field visit will happen.
-- Ask which maps already exist as QGIS outputs and which still need to be exported for the ICR.
-- Confirm cautious naming for `tepetate`; use `bajareque` consistently for `C-03`.
+- Do not request the base corpus fields again; they are already captured in the matrix and fichas.
+- If more detail is needed, ask only targeted optional questions: floor description, whether there are before/after photos, or which photo from each `fotografias_publicables/` folder should be used in the manuscript.
+- Continue using cautious naming for `piedra local / tepetate`; use `bajareque` consistently for `C-03`.
 
 ## Writing Guidance For Next Sessions
 - Use `construcciones tradicionales` as the default unit; avoid reverting to `viviendas` unless discussing prior literature.
