@@ -1,8 +1,25 @@
 # Cuadro comparativo de sistemas
 
-| Sistema | Caso | Materiales principales | Uso | Estado | Cambios principales | Relación con materiales locales | Observaciones |
-|---|---|---|---|---|---|---|---|
-| Penca de maguey | C-01 | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente |
-| Piedra local o "tepetate" | C-02 | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente |
-| Bajareque | C-03 | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente |
-| Órganos | C-04 | pendiente | pendiente | pendiente | pendiente | pendiente | pendiente |
+Este cuadro sintetiza los cuatro casos seleccionados para comparar sistemas, materialidad, uso, cambios y relatos asociados. No sustituye a las fichas; sirve como insumo para el capítulo de diagnóstico y para el producto operativo.
+
+| Caso | Sistema | Comunidad / ubicación ICR | Uso actual o recordado | Materiales principales | Estado físico cualitativo | Cambios materiales principales | Relato / tema dominante | Relación territorial-material | Implicación para conservación |
+|---|---|---|---|---|---|---|---|---|---|
+| C-01 | Penca de maguey | El Buena | Bodega vinculada a recolección, venta y almacenamiento de pulque | Penca de maguey, horcones, quiote de maguey, quiote de lechuguilla, madera, cemento y lámina | En uso, con adecuación material puntual y conservación del sistema constructivo principal | Sustitución de cubierta tradicional por lámina de cartón e incorporación de piso de concreto; reposición periódica de pencas deterioradas | Continuidad familiar del raspado de pulque, reducción del consumo local, conocimiento lunar para corte de pencas | Relación directa con magueyales, actividad pulquera y disponibilidad de pencas | Conservar no implica congelar: requiere mantenimiento activo, reposición de pencas y reconocimiento del saber productivo asociado |
+| C-02 | Piedra local / tepetate | El Deca por adscripción local | Bodega de herramienta y alimento para ganado; antes espacio habitado | Piedra local denominada tepetate por la comunidad, lodo, quiotes, carrizo, madera, lámina de acero y cemento | En pie, con permanencia morfológica general y adecuaciones materiales en cubierta y muros | Cubierta sustituida por lámina de acero; recubrimiento de cemento en gran parte del muro para cerrar huecos y evitar roedores | Memoria de primera vivienda familiar, traslado a casa de block, uso actual como bodega/corral | Relación con piedra local nombrada como tepetate, entorno de corral, cabras y magueyes | Respetar el nombre comunitario del material sin afirmar clasificación petrográfica; registrar adecuaciones como respuesta práctica a problemas cotidianos |
+| C-03 | Bajareque | El Buena | Cocina a base de fogón | Quiote de lechuguilla, quiote de maguey, castillo, madera, tierra, lámina de cartón y horcones | En pie, con alta permanencia morfológica y conservación del sistema constructivo principal | Sustitución de cubierta por lámina de cartón; conserva forma, entramado y sistema de bajareque | Apego afectivo a la cocina, sabor de comida en fogón, riesgo de demolición tras fallecimiento de usuaria principal, uso de castillo disponible en jardín | Relación con materiales vegetales inmediatos y con prácticas domésticas de cocina | Priorizar registro preventivo y transmisión de significado, porque el riesgo principal es generacional y no solo material |
+| C-04 | Órganos | El Deca por adscripción local | Cocina de fogón y almacenamiento de frutas y verduras | Cactus órgano, lámina de cartón, horcones, quiotes, madera y alambre recocido | En uso, con permanencia parcial del cerramiento de órganos y sustitución material localizada | Un muro fue parcialmente sustituido por láminas debido a la muerte de algunos órganos; la mayoría del perímetro vegetal sigue en pie | Comodidad de la cocina pequeña, trasplante después de luna llena, selección de tamaño adecuado y abundancia local de órganos | Relación con disponibilidad local de órganos y con uso vegetal como cerramiento vivo o semivivo | Documentar el manejo vivo del material: selección, trasplante, reposición y función como cerramiento doméstico, no solo como barrera divisoria |
+
+## Lectura Comparativa
+
+Los cuatro casos muestran que las construcciones tradicionales no permanecen por ausencia de cambio, sino por una combinación de continuidad morfológica, adecuaciones materiales y uso cotidiano. En todos los casos aparecen sustituciones en cubierta, principalmente con lámina, pero estas no eliminan por sí solas la lectura del sistema constructivo cuando se conserva la forma general, el cerramiento principal o la lógica material del espacio.
+
+La relación con el territorio se expresa de maneras distintas. En `C-01`, el maguey articula construcción, mantenimiento y actividad pulquera. En `C-02`, la piedra local denominada tepetate por la comunidad vincula memoria habitacional, uso actual y adaptación frente a roedores. En `C-03`, el bajareque combina tierra, quiotes y castillo disponible en el jardín con un valor doméstico asociado al sabor y al fogón. En `C-04`, los órganos funcionan como cerramiento vivo o semivivo de una cocina, no solo como barrera divisoria.
+
+La comparación también muestra que el estado físico no debe reducirse a códigos simples. Cada caso requiere una descripción cualitativa que distinga forma, material, uso, mantenimiento, relato y riesgo de continuidad. Las implicaciones de conservación se orientan hacia documentación, prevención y transmisión de conocimiento, más que hacia una restauración arquitectónica convencional.
+
+## Síntesis Para Diagnóstico
+
+- `C-01` representa mantenimiento activo de un sistema asociado al pulque y al maguey.
+- `C-02` representa permanencia morfológica con adecuaciones materiales derivadas de problemas cotidianos de uso.
+- `C-03` representa la mayor permanencia formal y un alto valor afectivo, pero con riesgo generacional.
+- `C-04` representa un cerramiento vegetal vivo o semivivo aplicado a una cocina, con conocimiento específico de selección y trasplante.

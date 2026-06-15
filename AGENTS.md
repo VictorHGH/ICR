@@ -67,6 +67,13 @@
   - `PL-03_Cardonal_Comunidades`: Cardonal community context with `El Deca / El Buena` polygons and perimeter labels.
   - `PL-04_Construcciones_Registradas`: local map of registered constructions and the four selected ICR cases; includes INEGI roads plus vector OSM roads as complementary access traces.
   - `PL-05_Relacion_Materiales_Territorio`: materials-territory map using vector vegetation (`Uso suelo / vegetación`), shaded relief, roads, community contours, and the four selected systems. The locator should visually reference the main map of `PL-04`.
+- The current 5 layouts (`PL-01` to `PL-05`) are visually approved by the user as of the latest cartography pass. Do not restyle them globally unless explicitly requested.
+- `OpenStreetMap` should remain at 100% opacity in these layouts. Shaded relief is inserted between `OpenStreetMap` and the thematic/vector layers where used.
+- Reference/locator maps should preserve the previous-plan visual sequence:
+  - `PL-02` locator references `PL-01` using persistent helper layer `Hidalgo (ref PL-02)` with thinner red Hidalgo highlight.
+  - `PL-03` locator references `PL-02` using persistent helper layer `Numeros Valle del Mezquital (ref PL-03)` with very small labels.
+  - `PL-04` locator references the main map of `PL-03`.
+  - `PL-05` locator references the main map of `PL-04` using persistent helper layer `Viviendas (ref PL-05)` with micro points/labels.
 - Layout maps are locked and store their own layer sets/styles. If a layer style is changed globally, re-store current layer styles in the affected layout map before saving.
 - Save the QGIS project after every substantial layout edit because a prior QGIS crash lost memory-layer layout work.
 - Persistent derived GeoPackage: `trabajos/03_cartografia/02_capas_fuente/contexto/regiones/icr_capas_derivadas.gpkg`.
@@ -76,6 +83,10 @@
 - Persistent Cardonal street layer: `trabajos/03_cartografia/02_capas_fuente/contexto/inegi_13_hidalgo/02_gpkg_trabajo/vialidades_cardonal_13e.gpkg`; derived from raw INEGI `13e` ejes de vialidad filtered to `CVE_MUN = 015`; used in `PL-03`.
 - Persistent OSM roads layer: `trabajos/03_cartografia/02_capas_fuente/contexto/osm/caminos_osm_el_deca_el_buena.gpkg`, internal layer `Caminos OSM El Deca-El Buena`; downloaded from Overpass for the El Deca/El Buena area and used in `PL-04` as complementary road/access evidence.
 - Persistent vegetation vector layer for `PL-05`: `trabajos/03_cartografia/02_capas_fuente/materiales/uso_suelo_vegetacion_cardonal/usv_serieV_f1411_vegetacion.gpkg`, internal layer `Uso suelo vegetacion Serie V`, shown in QGIS as `Uso suelo / vegetación` and categorized by `TIP_ECOV`.
+- Persistent reference helper layers now stored in the QGIS project:
+  - `Hidalgo (ref PL-02)` from INEGI `13ent.shp`.
+  - `Numeros Valle del Mezquital (ref PL-03)` from `icr_capas_derivadas.gpkg`.
+  - `Viviendas (ref PL-05)` from `construcciones_tradicionales.gpkg`.
 - `PL-04` road layers: `Vialidades INEGI`, `Puentes INEGI`, `Carreteras INEGI`, `Terracerias INEGI`, `Veredas INEGI`, and `Caminos OSM`. The OSM layer is drawn below INEGI road layers so it reads as complementary rather than replacing official data.
 - `PL-04` uses exact/internal construction points; public ICR export still needs location generalization or privacy approval before publication.
 - Persistent topographic derivatives: `trabajos/03_cartografia/02_capas_fuente/contexto/topografia_hidalgo/mde_cem_15m/derivados/`.
@@ -182,19 +193,20 @@
 - Decided not to use a single coded physical-state field because it would flatten the material, morphological, social, and narrative depth of each traditional construction. Use qualitative descriptions instead.
 - For `C-02`, use `piedra local / tepetate`: respect the community term `tepetate`, but avoid claiming a petrographic classification because no petrographic analysis will be done.
 - Public ICR location handling for the four cases is generalized by community; exact coordinates remain internal in QGIS only.
-- Latest pushed commits include `9e8fd5a [Updated] add PL-05 materials map` and `137f1dc [Updated] complete corpus matrix`.
+- Completed `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` and `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md` from the matrix/fichas.
+- Completed final minor cartographic refinements for `PL-02` through `PL-05`: relief backgrounds, reference-map consistency, thinner Hidalgo locator line, smaller Valle labels in `PL-03`, and micro construction markers/labels in the `PL-05` locator.
+- Latest pushed commits include `9e8fd5a [Updated] add PL-05 materials map`, `137f1dc [Updated] complete corpus matrix`, and `e6e4f2f [Updated] complete case fichas`.
 
 ## Next Steps
-- First action in the next session: create/fill `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` from the completed matrix and fichas. Compare systems, materials, use, physical state, changes, relato themes, territorial relation, and conservation implications.
-- Step 1: Complete `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md`.
-- Step 2: Complete or revise `trabajos/06_tablas_y_sintesis/matriz_pendientes_por_caso.md`; most base data is complete, so remaining notes should focus on optional ficha ampliation, public-image selection, and manuscript insertion.
-- Step 3: Expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` using the matrix, fichas, and maps `PL-04`/`PL-05`.
-- Step 4: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
-- Step 5: Decide whether maps `PL-06` and `PL-07` are actually needed. Do not create them automatically; likely options are access/route context and operational synthesis/ficha cartografica.
-- Step 6: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
+- First action in the next session: expand `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex` using the completed matrix, fichas, comparative table, and maps `PL-04`/`PL-05`.
+- Step 1: Integrate the comparative diagnostic narrative for `C-01` to `C-04` into the diagnosis chapter.
+- Step 2: Reference the cartographic package carefully: `PL-04` for registered constructions/selected cases and `PL-05` for materials-territory relation. Avoid exact coordinates in public manuscript text.
+- Step 3: Refine `estructura/008_producto_operativo/producto_operativo.tex` as a non-web operational product: ficha fields, map package, comparative synthesis, privacy levels, and documentation criteria.
+- Step 4: Decide whether maps `PL-06` and `PL-07` are actually needed. Do not create them automatically; likely options are access/route context and operational synthesis/ficha cartografica.
+- Step 5: Keep checking coherence across questions, objectives, methodology, diagnostic chapter, product chapter, and conclusions after each content update.
 
 ## Immediate User Prompt For Next Session
-- Start by saying: "La matriz y las fichas base ya están completas. El siguiente paso es hacer el cuadro comparativo de sistemas en `trabajos/06_tablas_y_sintesis/cuadro_comparativo_sistemas.md` y luego pasar ese contenido al capítulo de diagnóstico."
+- Start by saying: "La matriz, las fichas base y el cuadro comparativo ya están completos. El siguiente paso es pasar ese contenido al capítulo de diagnóstico en `estructura/007_diagnostico_descriptivo_y_cartografico/diagnostico_descriptivo_y_cartografico.tex`."
 - If the user wants to continue writing, work from the completed fichas and matrix; do not ask again for data already captured unless a contradiction appears.
 - Do not expose exact coordinates, owners, or sensitive identifying information in the manuscript.
 
