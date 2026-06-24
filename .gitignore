@@ -6,6 +6,7 @@ bibliografia_anterior/
 *.log
 *.out
 *.toc
+*.lof
 *.bbl
 *.blg
 *.fdb_latexmk
