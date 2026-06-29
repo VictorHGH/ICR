@@ -1,0 +1,11 @@
+clave_registro,clave_caso,fid_viviendas,id_viviendas,sistema_o_material_visible,carpeta_anexo,estatus_icr,observaciones_publicacion
+R-01,,1,2,"Piedra caliza, cemento, pencas de maguey, quiotes y madera",../01_originales_por_registro/R-01,registro_general,"Revisar fotografias antes de publicar."
+R-02,C-04,2,3,"Organos",../01_originales_por_registro/R-02_C-04_organos,caso_seleccionado,"Usar ubicacion generalizada; revisar presencia de personas."
+R-03,C-02,3,4,"Piedra local / tepetate",../01_originales_por_registro/R-03_C-02_piedra_local_tepetate,caso_seleccionado,"Usar ubicacion generalizada; no afirmar clasificacion petrografica."
+R-04,,4,5,"Block, piedra, lamina, concreto y elementos tradicionales",../01_originales_por_registro/R-04,registro_general,"Revisar fotografias antes de publicar."
+R-05,C-03,5,6,"Bajareque",../01_originales_por_registro/R-05_C-03_bajareque,caso_seleccionado,"Usar ubicacion generalizada; revisar interiores sensibles."
+R-06,,6,7,"Piedra local, piedra caliza, ladrillo y cemento",../01_originales_por_registro/R-06,registro_general,"Revisar fotografias antes de publicar."
+R-07,,7,8,"Piedra local, concreto, block, quiotes, horcones y lamina",../01_originales_por_registro/R-07,registro_general,"Revisar fotografias antes de publicar."
+R-08,,8,9,"Pencas de maguey, quiotes, madera y laminas",../01_originales_por_registro/R-08,registro_general,"Revisar fotografias antes de publicar."
+R-09,,9,10,"Piedra local, tabique, madera, tierra, cemento y lamina",../01_originales_por_registro/R-09,registro_general,"Revisar fotografias antes de publicar."
+R-10,C-01,10,11,"Penca de maguey",../01_originales_por_registro/R-10_C-01_penca_de_maguey,caso_seleccionado,"Usar ubicacion generalizada; vinculado a actividad pulquera."
